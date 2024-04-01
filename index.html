@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="script.js" defer></script>
+  <title>Cat's Conquest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
+</head>
+<body>
+  <main>
+    <section id="menu" class="grey-ui">
+      <div id="main-menu" class="grey-ui">
+        <h1>Cat's Conquest</h1>
+        <p id="help-button" class="btn">Help</p>
+        <p id="start-button" class="btn">Click To Start</p>
+      </div>
+      <div id="help" class="grey-ui">
+        <p>
+          You are a fierce cat warrior who is trying to defend the kingdom from the evil sorcerer who is causing chaos across the lands. You must slay the evil sorcerer or else they will continue to wreak havoc on the cat population. Having trained for many years, you are now a master swordsman with extraordinary technique. 
+        </p>
+        <p>You have a weak attack</p>
+        <p class="attack-button">Weak attack</p>
+        <p>As well as a strong attack that you can only use three times</p>
+        <p class="attack-button">Strong Attack</p>
+        <p id="return-button">Return to menu</p>
+      </div>
+    </section>
+  
+    <section id="game-play">
+      <div id="container">
+        <div id="move" class="grey-ui">Defeat the Evil Sorcerer</div>
+        <div class="player-unit-ui unit-ui">
+          <div class="ui">
+            <div id="player-name">You</div>
+            <div id="player-health">Hp: 10</div>
+            <div class="health-bar">
+              <div id="player-health-bar"></div>
+            </div>
+          </div>
+          <div id="player"><canvas id="player-canvas" width="200" height="190"></canvas>
+          </div>
+        </div>
+        
+        <div class="enemy-unit-ui unit-ui">
+          <div class="ui">
+            <div id="enemy-name">Evil Sorcerer</div>
+            <div id="enemy-health">hp: 10/10</div>
+            <div id="enemy-health-bar" class="health-bar">
+          </div>
+        </div>
+        <div id="enemy"><canvas id="enemy-canvas" width="500" height="350"></canvas></div>
+        </div>
+
+        
+        <div class="play-again-container">
+          <h2 id="outcome"></h2>
+          <p id="play-again">Play Again?</p>
+        </div>
+        </section>
+      </div>
+    </section> 
+
+    <section id="player-controls">
+      <p id="weak-attack" class="attack attack-button">weak attack</p>
+      <p id="strong-attack" class="attack attack-button">strong attack</p>
+      <p id="strongAtkCounter">strong attack counter: 3</p>
+      <div id="blocker"></div>
+    </section>
+  </main>
+</body>
+</html>
