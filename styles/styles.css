@@ -1,0 +1,187 @@
+/* https://harbingersolution.itch.io/grassy-meadow-parallax-background menu background reference */
+/* https://free-game-assets.itch.io/nature-landscapes-free-pixel-art?download in game background reference */
+/* general styling */
+/* //https://codepen.io/reulison/pen/WNNVPZq button reference
+//reference for ui https://dribbble.com/shots/5777943-UI-for-pixel-art-game-Dice-Heroes */
+
+html, body {
+  width:  100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  font-family: "VT323", serif;
+}
+
+p {
+  color: white;
+  text-decoration: none;
+}
+
+/* menu stylng */
+
+#menu {
+  width: 100%;
+  height: 100vh;
+  background-image: url('/media/background.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+#menu.startGame,
+#main-menu.startGame {
+  display: none;
+}
+
+#game-play {
+  display: none;
+  background-image: url('/media/orig.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* game styling */
+#container {
+  position: relative;
+  margin: 0 1rem;
+  height: 80vh;
+}
+
+#container .play-again-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+#container #move {
+  text-align: center;
+}
+
+/* player and enemy styling */
+
+#player-health-bar {
+  background-color: green;
+  width: 100%;
+  height: 50px;
+}
+
+.enemy-unit-ui:not(#enemy-health-bar) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#enemy {
+    bottom: 75px;
+}
+
+#enemy-canvas {
+  transform: scaleX(-1);
+}
+
+#enemy-health-bar {
+  height: 50px;
+  width: 100%;
+  background-color: green;  
+}
+
+/* ui */
+.grey-ui {
+  background-color: #525162;
+  border: 3px solid rgb(233, 233, 233);
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+
+.ui {
+  padding: 1rem;
+  background-color: #759593;
+  border: 3px solid rgb(233, 233, 233);
+  width: 300px;
+  color: white;
+}
+
+.player-unit-ui {
+  position: absolute;
+  bottom: 0;
+}
+
+.enemy-unit-ui {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#help {
+  display: none;
+  font-size: 1.2rem;
+  width: 80%;
+}
+
+/* player controls styling */
+#player-controls {
+  padding: 1rem 1rem 4rem 1rem;
+  display: flex;
+  background-color: #394f57;
+  border: 2px solid white;
+  display: none;
+  position: relative;
+}
+
+#player-controls p {
+  margin: 0;
+  padding: 10px;
+}
+
+.attack-button {
+  text-align: center;
+  display: inline-block;
+  margin:5px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: lightgray;
+  box-shadow: 0 .2em gray; 
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#main-menu p:hover,
+#help p#return-button:hover,
+#player-controls p.attack:hover,
+.play-again-container p#play-again:hover {
+  cursor: pointer;
+  color: #797979;
+}
+
+#player-controls p:active {
+box-shadow: none;
+position: relative;
+top: .2em;
+}
+
+#blocker {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  display: none;
+  opacity: 0;
+}
+
+
+/* toggle for turning things on and off wanted to make sure it worked so i just put it at the bottom */
+#game-play.start,
+#help.start,
+#player-controls.start,
+#blocker.startGame {
+  display: block;
+}
+
+
